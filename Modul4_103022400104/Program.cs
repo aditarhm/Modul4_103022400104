@@ -10,13 +10,14 @@ namespace TP_MODUL4_103022400104
     {
         static void Main(string[] args)
         {
-            KodePaket kode = new KodePaket();
+            MesinKopi mesinKopi = new MesinKopi();
 
-            Console.WriteLine("Masukkan nama paket: ");
-            string namaPaket = Console.ReadLine();
-
-            string hasil = kode.GetKodePaket(namaPaket);
-            Console.WriteLine("Kode paket:" + hasil);
+            mesinKopi.PowerOn();
+            mesinKopi.StartBrew();
+            mesinKopi.FinishBrew();
+            mesinKopi.StartMaintenance(); 
+            mesinKopi.FinishMaintenance(); 
+            mesinKopi.StartBrew();
         }
     }
 }
